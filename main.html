@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-tw" style="height:100%;"><!--<![endif]-->
+  <head>
+    <!-- charset meta tag -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- for RWD maybe (?) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- setting/config/lib -->
+    <script src="config/js/constant.js"></script>
+    <script src="config/js/hash_table.js"></script>
+    <script src="lib/helper.js"></script>
+    <!-- controllers -->
+    <script src="controller/div_object_controller.js"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/div_object.css">
+    <!-- view -->
+    <script src="view/div_object.js"></script>
+    <script src="main.js"></script>
+    <!-- for UI -->
+    <script src="controller/ui/ui_controller.js"></script>
+    <script src="view/ui/ui.js"></script>
+    <link rel="stylesheet" href="style/ui/ui.css">
+  </head>
+  <!-- background: 主畫面外的頁面 -->
+  <body class='background'>
+   
+    <!-- gameboard: 主畫面 -->
+    <div class='gameboard'>
+     
+      <!-- UI cover -->
+      <div class='ui'>
+          <div id = 'but_s'>
+              <button>Play</button>
+          </div>
+      </div>
+
+    </div>
+  </body>
+
+
+  <script>
+    game_loop();
+  </script>
+</html>

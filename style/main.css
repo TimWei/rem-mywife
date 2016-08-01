@@ -1,0 +1,14 @@
+
+/*default style */
+  .gameboard {
+    border-top: 250px;
+    margin: 0 auto;
+    width: 1024px;
+    height: 768px;
+    background-color: #ffe6e6;
+    overflow: hidden
+  }
+
+  .background{
+    background-color: black;
+  }
