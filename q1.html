@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw" style="height:100%;"><!--<![endif]-->
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body id='background'>
+    <div id='gameboard'>
+      <div id = 'ui'>
+        <div id = 'but_s'>
+          <button>Play</button>
+        </div>
+      </div>
+
+
+      <div id='rabi' style= 'bottom: -643px; left: 0px;'>
+
+      </div>
+    </div>
+  </body>
+
+
+  <script>
+    SCREEN_WIDTH = 1024;
+    SCREEN_HEIGHT = 768;
+    D_TIME = 25;
+    var test = 0;
+    var loop_on = false;
+
+    game_loop();
+
+
+    function game_loop(){
+
+      console.log(test++);
+
+
+
+      if(loop_on){
+        setTimeout(game_loop,D_TIME);
+      }
+    }
+
+
+
+
+
+    function pos(div,x,y){
+      tar = div[0];
+      real_x = x - tar.offsetWidth / 2;
+      real_y = -768 + tar.offsetHeight + y;
+      tar.style.left = real_x+'px';
+      tar.style.bottom = real_y + 'px';
+    }
+
+    function log(string){
+      console.log('=============');
+      console.log(string);
+      console.log('=============');
+    }
+
+  </script>
+
+
+  <style>
+  #rabi{
+    position: relative;
+    background-color: red;
+    height: 125px;
+    width: 75px;
+    display: inline-block;
+  }
+
+
+  #ui {
+    display: inline;
+    width: 1024px;
+    height: 768px;
+    background-color: red;
+  }
+
+  #ui > #but_s{
+    margin-top: 5px;
+    margin-right: 10px;
+    float: right;
+  }
+
+  #gameboard {
+    border-top: 250px;
+    margin: 0 auto;
+    width: 1024px;
+    height: 768px;
+    background-color: #ffe6e6;
+  }
+
+  #background{
+    background-color: black;
+  }
+  </style>
+</html>
