@@ -8,8 +8,9 @@
   }
 
 
-	.ui > #but_s{
- 		margin-top: 5px;
-		margin-right: 10px;
-		float: right;
-	}
+
+
+  .ui > .alert {
+    text-align: center;
+    line-height: 5px;
+  }
