@@ -1,5 +1,5 @@
   .ui {
-    position: fixed;
+    position: relative;
     display: inline;
     border-width: 0px;
     width: 1024px;

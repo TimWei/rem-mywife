@@ -1,5 +1,5 @@
-    SCREEN_WIDTH = 1024;
-    SCREEN_HEIGHT = 768;
+    SCREEN_WIDTH = 1280;
+    SCREEN_HEIGHT = 720;
     DELTA_TIME = 25;
     LOOP_ON = false;
     PREV_LOOP = new Date;
