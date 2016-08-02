@@ -2,7 +2,7 @@ class Scene  {
   constructor() {
   }
   
-  change_to(scene){
+  set_scene(scene){
   	// clear if exsit
   	if(document.getElementById('scene')){
 	  	document.getElementById('scene').remove();

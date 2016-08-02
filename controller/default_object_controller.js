@@ -11,8 +11,8 @@ class DefaultObject {
 
   move_to(x,y){
   	var tar = this.elem;
-    var real_x = x - tar.offsetWidth / 2;
-    var real_y = -(SCREEN_HEIGHT) + (tar.offsetHeight / 2) + y;
+    var real_x = x - tar.offsetWidth / 2 ;
+    var real_y = y - tar.offsetHeight /2 ;
     tar.style.left = real_x+'px';
     tar.style.bottom = real_y + 'px';
     return 0;
@@ -20,7 +20,10 @@ class DefaultObject {
 
   pos(){
     var tar = this.elem;
-    return { 'x': parseFloat(tar.style.left.slice(0,-2)) + tar.offsetWidth / 2, 'y': -(SCREEN_HEIGHT) + tar.offsetHeight / 2 - parseFloat(tar.style.bottom.slice(0,-2)) }
+    var obj_x = parseFloat(tar.style.left.slice(0,-2));
+    var obj_y = parseFloat(tar.style.bottom.slice(0,-2));
+
+    return { 'x': obj_x + tar.offsetWidth / 2 - $('.gameboard').offset().left, 'y':  obj_y + tar.offsetHeight / 2  }
   }
   get_trans(){
     return { 'width': this.elem.style.width, 'height': SCREEN_HEIGHT - (tar.offsetHeight - this.elem.style.height)}
@@ -56,7 +59,7 @@ class DefaultObject {
 
   as(subclass){
     var name = this.elem.className;
-    this.elem.className = name.split(' ')[0] + ' ' + name.split(' ')[1] + ' ' + subclass;
+    this.elem.className = name.split(' ')[0] +  ' ' + subclass;
     return 0;
   }
 
