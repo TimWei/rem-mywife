@@ -1,6 +1,5 @@
 // use ready as promise
 $('.ui').ready(function(){
-
 	obj = new_ui('play_btn');
 	obj.set_rect(50,35);
 	obj.set_text('Play');
