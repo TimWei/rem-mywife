@@ -1,8 +1,14 @@
 
-.div_obj{
+  .rect{
     position: relative;
     display: inline-block;
   }
+  .sphe{
+  	position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0;
+  }
   #rabi{
-  	background-color: red;
+  	background-color: blue;
   }
