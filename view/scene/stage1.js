@@ -2,23 +2,23 @@
 	SCENE_MNR.set_ui('default');
 
     qq = 1;
-    $('.gameboard').on('click',function(e){
 
+    $('.gameboard').on('click',function(e){
+        if(e.target.className.includes('ui_obj')){return;}
         click_pos = get_relate_pos(e);
         tmp = new_div('bo' + qq++);
         tmp.set_sphe(20);
         tmp.as('blast');
         tmp.move_to(click_pos.x,click_pos.y);
-        log(click_pos);
-
+        tmp.set_life(1000);
+        // log(click_pos);
     });
-
 
 
     function init(){
         obj = new_div('rabi');
         obj.set_sphe(125);
-        obj.move_to(0,0);
+        obj.move_to(600, 62.5);
     };
 
     function game_loop(){
@@ -36,6 +36,7 @@
 
 
 
+        div_lifecycle();
         setTimeout(game_loop, DELTA_TIME);
         UI_MAP['fraps'].set_text('fps:' + get_fps());
       }

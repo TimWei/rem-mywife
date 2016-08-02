@@ -23,7 +23,7 @@ class DefaultObject {
     var obj_x = parseFloat(tar.style.left.slice(0,-2));
     var obj_y = parseFloat(tar.style.bottom.slice(0,-2));
 
-    return { 'x': obj_x + tar.offsetWidth / 2 - $('.gameboard').offset().left, 'y':  obj_y + tar.offsetHeight / 2  }
+    return { 'x': obj_x + tar.offsetWidth / 2 , 'y':  obj_y + tar.offsetHeight / 2  }
   }
   get_trans(){
     return { 'width': this.elem.style.width, 'height': SCREEN_HEIGHT - (tar.offsetHeight - this.elem.style.height)}
@@ -57,6 +57,10 @@ class DefaultObject {
     return 0;
   }
 
+  set_life(lifetime){
+    this.lifetime = (lifetime / DELTA_TIME);
+  }
+
   as(subclass){
     var name = this.elem.className;
     this.elem.className = name.split(' ')[0] +  ' ' + subclass;
@@ -71,5 +75,10 @@ class DefaultObject {
     }else{
       this.elem.style['float'] = '';
     }
+  }
+
+  destroy(){
+    this.elem.parentNode.removeChild(this.elem);
+    delete DIV_MAP[this.elem.id];
   }
 }
