@@ -8,9 +8,8 @@
   }
 
 
-
-
   .ui > .alert {
     text-align: center;
     line-height: 5px;
+    margin-bottom:  0px;
   }
