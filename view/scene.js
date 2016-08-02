@@ -2,6 +2,6 @@
 
 $(document).ready(function(){
 	SCENE_MNR = new Scene();
-	SCENE_MNR.change_to('stage1');
+	SCENE_MNR.set_scene('stage1');
 });
 
