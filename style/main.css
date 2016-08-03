@@ -2,12 +2,13 @@
 /*default style */
   .gameboard {
     position: relative;
-
     margin: 0 auto;
     margin-top: 2%;
     width: 1280px;
     height: 720px;
     background-color: #ffe6e6;
+    background-size: contain;
+    background-repeat: no-repeat;
     overflow: hidden
   }
 

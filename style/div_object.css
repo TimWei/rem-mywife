@@ -20,9 +20,14 @@
   }
 
   #rabi{
-    background-color: blue;
+   /*background-color: blue;*/
+    background-image: url('../image/rabi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   #boss{
-    background-color: red;
+    background-image: url('../image/boss.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
