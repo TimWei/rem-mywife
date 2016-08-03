@@ -13,6 +13,8 @@
     text-align: center;
     line-height: 5px;
     margin-bottom:  0px;    
+    border-top: 0px;
+    border-right: 0px;
     border-color: white;
     background-color: #b3ccff;
     border-width: 2px;
