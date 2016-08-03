@@ -77,8 +77,8 @@ class DefaultObject {
     }
   }
 
-  destroy(){
+  destroy(map){
     this.elem.parentNode.removeChild(this.elem);
-    delete DIV_MAP[this.elem.id];
+    delete map[this.elem.id];
   }
 }

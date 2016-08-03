@@ -1,12 +1,12 @@
-// $(document).ready(function(){
+
 	SCENE_MNR.set_ui('default');
 
-    qq = 1;
+    stage1 ={ qq: 1};
 
     $('.gameboard').on('click',function(e){
         if(e.target.className.includes('ui_obj')){return;}
         click_pos = get_relate_pos(e);
-        tmp = new_div('bo' + qq++);
+        tmp = new_div('bo' + stage1.qq++);
         tmp.set_sphe(20);
         tmp.as('blast');
         tmp.move_to(click_pos.x,click_pos.y);
@@ -17,8 +17,8 @@
 
     function init(){
         obj = new_div('rabi');
-        obj.set_sphe(125);
-        obj.move_to(600, 62.5);
+        obj.set_sphe(100);
+        obj.move_to(600, 50);
     };
 
     function game_loop(){
@@ -44,10 +44,3 @@
 
     init();
     game_loop();
-
-
-
-
-
-// });
-
