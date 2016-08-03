@@ -11,8 +11,8 @@ class DefaultObject {
 
   move_to(x,y){
   	var tar = this.elem;
-    var real_x = x - tar.offsetWidth / 2;
-    var real_y = -(SCREEN_HEIGHT) + tar.offsetHeight + y;
+    var real_x = x - tar.offsetWidth / 2 ;
+    var real_y = y - tar.offsetHeight /2 ;
     tar.style.left = real_x+'px';
     tar.style.bottom = real_y + 'px';
     return 0;
@@ -20,15 +20,32 @@ class DefaultObject {
 
   pos(){
     var tar = this.elem;
-    return { 'x': parseFloat(tar.style.left.slice(0,-2)) + tar.offsetWidth / 2, 'y': -(SCREEN_HEIGHT) + tar.offsetHeight - parseFloat(tar.style.bottom.slice(0,-2)) }
+    var obj_x = parseFloat(tar.style.left.slice(0,-2));
+    var obj_y = parseFloat(tar.style.bottom.slice(0,-2));
+
+    return { 'x': obj_x + tar.offsetWidth / 2 , 'y':  obj_y + tar.offsetHeight / 2  }
   }
   get_trans(){
     return { 'width': this.elem.style.width, 'height': SCREEN_HEIGHT - (tar.offsetHeight - this.elem.style.height)}
   }
 
-  set_trans(width,height){
-    this.elem.style.width = width + 'px';
-    this.elem.style.height = height + 'px';
+  set_rect(width,height){
+    var tar = this.elem;
+    if(!tar.className.includes('rect')){
+      tar.className = tar.className.replace('sphe','rect')
+    }
+    tar.style.width = width + 'px';
+    tar.style.height = height + 'px';
+    return 0;
+  }
+
+  set_sphe(radius){
+    var tar = this.elem;
+    if(!tar.className.includes('sphe')){
+      tar.className = tar.className.replace('rect','sphe')
+    }
+    this.elem.style.width = radius + 'px';
+    this.elem.style.height = radius + 'px';
     return 0;
   }
 
@@ -40,18 +57,28 @@ class DefaultObject {
     return 0;
   }
 
+  set_life(lifetime){
+    this.lifetime = (lifetime / DELTA_TIME);
+  }
+
   as(subclass){
     var name = this.elem.className;
-    this.elem.className = name.split(' ')[0] + ' ' + subclass;
+    this.elem.className = name.split(' ')[0] +  ' ' + subclass;
     return 0;
   }
+
   float_to(direction){
     if(direction == 'right'){
       this.elem.style['float'] = 'right';
     }else if (direction == 'left'){
       this.elem.style['float'] = 'left';
     }else{
-      return 1;
+      this.elem.style['float'] = '';
     }
+  }
+
+  destroy(){
+    this.elem.parentNode.removeChild(this.elem);
+    delete DIV_MAP[this.elem.id];
   }
 }
