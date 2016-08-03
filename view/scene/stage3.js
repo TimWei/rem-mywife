@@ -96,14 +96,9 @@
 
     function game_loop(){
       if(LOOP_ON){
-        
-        if(stage3.ctr %15 == 0){build_bullet();}
-
-
+        if(stage3.ctr %5 == 0){build_bullet();}
         boss_move_per_frame(DIV_MAP['boss']);
-        
         cul_bullet();
-
         //div_lifecycle();
         bullect_lifecycle();
         setTimeout(game_loop, DELTA_TIME);
