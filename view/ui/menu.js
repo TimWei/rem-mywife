@@ -27,14 +27,14 @@ $('.ui').ready(function(){
 	obj.as('btn btn-warning');
 	obj.move_to(x_pos, 300)
 	$('#controller_and_view').on('click',function(){
-		SCENE_MNR.set_scene('view/scene/stage1.js');
+		SCENE_MNR.set_scene('view/scene/control_view.js');
 	});
 
 	$('#board_and_ui').on('click',function(){
-		SCENE_MNR.set_scene('view/scene/stage2.js');
+		SCENE_MNR.set_scene('view/scene/board_ui.js');
 	});
 
 	$('#demo').on('click',function(){
-		SCENE_MNR.set_scene('view/scene/stage3.js');
+		SCENE_MNR.set_scene('view/scene/demo.js');
 	});
 });
