@@ -7,7 +7,7 @@ class Scene  {
   	if(document.getElementById('scene')){
 	  	document.getElementById('scene').remove();
 	  	document.getElementsByClassName('gameboard')[0].innerHTML = '';
-	}
+	  }
   	for(var key in DIV_MAP){
   		delete DIV_MAP[key];
   	}
@@ -16,10 +16,10 @@ class Scene  {
   	ele.className = 'ui';
   	document.getElementsByClassName('gameboard')[0].appendChild(ele);
   	// rebuild scene scipt
-	var ele = document.createElement('script');
-	ele.src = 'view/scene/' + scene + '.js';
-	ele.id = 'scene';
-	document.getElementsByTagName('head')[0].appendChild(ele); 
+  	var ele = document.createElement('script');
+  	ele.src = scene;
+  	ele.id = 'scene';
+  	document.getElementsByTagName('head')[0].appendChild(ele); 
   }
 
 
