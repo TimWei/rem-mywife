@@ -7,16 +7,29 @@
     /*background-color: red;*/
   }
 
+    
 
   .ui > .alert {
     text-align: center;
     line-height: 5px;
-    margin-bottom:  0px;
+    margin-bottom:  0px;    
+    border-color: white;
+    background-color: #b3ccff;
+    border-width: 2px;
+    color: black;
   }  
-  .ui > .alert-warning {
-    border: 1px solid #ccc
-  }
+  
+  .ui > .btn {
+    border-radius: 30px;
+  }  
+
 
   .ui_obj {
     position: absolute;
+  }
+
+  #top_banner{
+    font-size: 30px;
+    line-height: 100%;
+    border-width: 5px;
   }

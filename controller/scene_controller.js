@@ -3,10 +3,12 @@ class Scene  {
   }
   
   set_scene(scene, scene_id = null){
+    var gameboard = document.getElementsByClassName('gameboard')[0];
+
   	// clear if exsit
   	if(document.getElementById('scene')){
 	  	document.getElementById('scene').remove();
-	  	document.getElementsByClassName('gameboard')[0].innerHTML = '';
+	  	gameboard.innerHTML = '';
 	  }
   	for(var key in DIV_MAP){
   		delete DIV_MAP[key];
@@ -14,8 +16,12 @@ class Scene  {
   	// rebuild ui
   	var ele = document.createElement('div');
   	ele.className = 'ui';
-  	document.getElementsByClassName('gameboard')[0].appendChild(ele);
-    if(scene_id) {document.getElementsByClassName('gameboard')[0].id = scene_id;}
+  	gameboard.appendChild(ele);
+    if(scene_id) {
+      gameboard.id = scene_id;
+    }else{
+      gameboard.id = ''
+    }
   	// rebuild scene scipt
   	var ele = document.createElement('script');
   	ele.src = scene;

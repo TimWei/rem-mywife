@@ -1,5 +1,5 @@
     // $(document).ready(function(){
-	SCENE_MNR.set_ui('default');
+	SCENE_MNR.set_ui('stage3');
 
     //use hashtable as var namespace
     var stage3 = {
