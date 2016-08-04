@@ -1,15 +1,4 @@
 
-  .rect{
-    position: absolute;
-    display: inline-block;
-  }
-
-  .sphe{
-  	position: absolute;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 0;
-  }
 
   .blast{
     background-color: red;
@@ -30,4 +19,8 @@
     background-image: url('../image/boss.png');
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  #bill_board{
+    background-color: #e6ffff;
   }

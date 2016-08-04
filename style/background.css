@@ -3,6 +3,10 @@
 	background-image: url('../image/stg.png');
 }
 
-#menu {
-	background-image: url('../image/menu.png');
+#rem {
+	background-image: url('../image/rem.png');
+}
+
+#ram {
+	background-image: url('../image/ram.png');
 }

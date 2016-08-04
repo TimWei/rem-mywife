@@ -1,6 +1,7 @@
 // use ready as promise
 $('.ui').ready(function(){
 
+	var ui_count = 2;
 
 	obj = new_ui('play_btn');
 	obj.set_rect(75,35);

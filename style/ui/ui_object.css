@@ -35,3 +35,11 @@
     line-height: 100%;
     border-width: 5px;
   }
+
+  #ram #top_banner {
+    background-color: #b3ccff;
+  }  
+
+  #rem #top_banner {
+    background-color: #ffe6e6;
+  }
