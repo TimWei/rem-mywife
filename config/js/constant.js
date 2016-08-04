@@ -5,4 +5,3 @@
     DELTA_TIME = 25;
     // main loop flag
     LOOP_ON = false;
-
